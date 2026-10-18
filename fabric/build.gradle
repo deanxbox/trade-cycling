@@ -6,6 +6,17 @@ apply plugin: 'mod-update'
 
 apply from: "https://raw.githubusercontent.com/henkelmax/mod-gradle-scripts/${mod_gradle_script_version}/mod.gradle"
 
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+}
+
+dependencies {
+    compileOnly "com.terraformersmc:modmenu:${modmenu_version}"
+}
+
 processResources {
     filesMatching('fabric.mod.json') {
         expand 'java_version': java_version,

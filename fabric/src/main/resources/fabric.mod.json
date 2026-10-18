@@ -22,6 +22,9 @@
     ],
     "client": [
       "de.maxhenkel.tradecycling.FabricTradeCyclingClientMod"
+    ],
+    "modmenu": [
+      "de.maxhenkel.tradecycling.FabricModMenuIntegration"
     ]
   },
   "mixins": [
@@ -36,6 +39,7 @@
     "fabric-api": "${fabric_api_dependency_breaks}"
   },
   "suggests": {
-    "visibletraders": ">=2.2.0"
+    "visibletraders": ">=2.2.0",
+    "modmenu": ">=18.0.0-beta.1"
   }
 }

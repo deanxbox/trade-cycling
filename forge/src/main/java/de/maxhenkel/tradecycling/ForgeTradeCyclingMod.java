@@ -1,6 +1,8 @@
 package de.maxhenkel.tradecycling;
 
 import de.maxhenkel.tradecycling.net.CycleTradesPacket;
+import de.maxhenkel.tradecycling.net.ServerAutoCycleResultPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -48,4 +50,9 @@ public class ForgeTradeCyclingMod extends TradeCyclingMod {
     public boolean isModLoaded(String modId) {
         return ModList.isLoaded(modId);
     }
+
+    @Override
+    public void sendServerAutoCycleResult(ServerPlayer player, ServerAutoCycleResultPacket packet) {
+    }
 }
+

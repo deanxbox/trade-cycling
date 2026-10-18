@@ -1,6 +1,7 @@
 package de.maxhenkel.tradecycling;
 
 import de.maxhenkel.tradecycling.net.CycleTradesPacket;
+import de.maxhenkel.tradecycling.net.ServerAutoCycleResultPacket;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;
@@ -42,6 +43,10 @@ public class NeoForgeTradeCyclingMod extends TradeCyclingMod {
     @Override
     public boolean isModLoaded(String modId) {
         return ModList.get().isLoaded(modId);
+    }
+
+    @Override
+    public void sendServerAutoCycleResult(ServerPlayer player, ServerAutoCycleResultPacket packet) {
     }
 
 }

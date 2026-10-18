@@ -22,8 +22,8 @@ public class CycleTradesButton extends AbstractButton {
     public static final int WIDTH = 18;
     public static final int HEIGHT = 14;
 
-    private MerchantScreen screen;
-    private Consumer<CycleTradesButton> onPress;
+    private final MerchantScreen screen;
+    private final Consumer<CycleTradesButton> onPress;
 
     public CycleTradesButton(int x, int y, Consumer<CycleTradesButton> onPress, MerchantScreen screen) {
         super(x, y, WIDTH, HEIGHT, Component.empty());
